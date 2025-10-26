@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CMK Embed Demo</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f9fafb;
+        color: #111827;
+      }
+
+      header {
+        max-width: 720px;
+        margin: 0 auto 2rem;
+      }
+
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      pre {
+        background: #111827;
+        color: #f3f4f6;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CMK Embed Demo</h1>
+      <p>
+        このデモは <code>@cmk/embed</code> のカスタムエレメント
+        <code>&lt;cmk-embed&gt;</code> を実際に動かして確認するための環境です。
+        Kintone の接続情報を設定しない場合はモックデータで動作します。
+      </p>
+      <p>
+        現在のモード: <strong data-mode>判定中...</strong>
+      </p>
+    </header>
+    <main>
+      <section>
+        <h2>最新記事</h2>
+        <cmk-embed data-app="blog" data-slug="hello-world"></cmk-embed>
+      </section>
+
+      <section>
+        <h2>使い方</h2>
+        <ol>
+          <li><code>pnpm install</code> を実行</li>
+          <li><code>pnpm build</code> でパッケージをビルド</li>
+          <li><code>apps/embed-demo/.env.example</code> を参考に接続情報を設定</li>
+          <li><code>pnpm dev --filter @cmk/embed-demo</code> で起動</li>
+        </ol>
+        <p>
+          モックモードでの表示例:
+        </p>
+        <pre><code>&lt;cmk-embed data-app="blog" data-slug="hello-world"&gt;&lt;/cmk-embed&gt;</code></pre>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
