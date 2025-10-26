@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "@cmk/core": [
+        "apps/core/src/index.ts"
+      ],
+      "@cmk/core/*": [
+        "apps/core/src/*"
+      ],
+      "@cmk/embed": [
+        "apps/embed/src/index.ts"
+      ],
+      "@cmk/embed/*": [
+        "apps/embed/src/*"
+      ]
+    }
+  },
+  "include": [
+    "apps/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}
