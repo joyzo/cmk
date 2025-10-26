@@ -1,0 +1,29 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@cmk/embed": [
+        "../embed/src/index.ts"
+      ],
+      "@cmk/embed/*": [
+        "../embed/src/*"
+      ],
+      "@cmk/core": [
+        "../core/src/index.ts"
+      ],
+      "@cmk/core/*": [
+        "../core/src/*"
+      ]
+    },
+    "types": [
+      "vite/client",
+      "node"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "vite.config.ts"
+  ]
+}
